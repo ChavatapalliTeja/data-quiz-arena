@@ -4,7 +4,7 @@ import { io } from 'socket.io-client';
 import { Activity, ArrowRight, BarChart3, Check, ChevronRight, CircleHelp, Copy, Crown, Database, FileSpreadsheet, Flame, Layers3, LoaderCircle, LogIn, Medal, Radio, ShieldCheck, Sparkles, Trophy, Users, X } from 'lucide-react';
 import './style.css';
 
-const SERVER_URL = (import.meta.env.VITE_SERVER_URL || 'https://data-quiz-arena.onrender.comreplace(/\/$/, '');
+const SERVER_URL = (import.meta.env.VITE_SERVER_URL || 'https://data-quiz-arena.onrender.com').replace(/\/$/, '');
 const socket = io(SERVER_URL, { autoConnect: true, reconnection: true, reconnectionAttempts: Infinity, timeout: 10000 });
 const initials = name => (name || '?').trim().split(/\s+/).slice(0, 2).map(s => s[0]?.toUpperCase()).join('');
 const topics = [

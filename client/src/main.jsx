@@ -7,6 +7,7 @@ import './style.css';
 const SERVER_URL = (import.meta.env.VITE_SERVER_URL || 'https://data-quiz-arena.onrender.com').replace(/\/$/, '');
 const socket = io(SERVER_URL, { autoConnect: true, reconnection: true, reconnectionAttempts: Infinity, timeout: 10000 });
 const initials = name => (name || '?').trim().split(/\s+/).slice(0, 2).map(s => s[0]?.toUpperCase()).join('');
+const myTitle = "🔥 Teja's Data Quiz Arena - Amalapuram";
 const topics = [
   { icon: BarChart3, title: 'Data Analysis', subtitle: 'Patterns, metrics & insights', tone: 'violet' },
   { icon: FileSpreadsheet, title: 'Excel', subtitle: 'Formulas & smart workflows', tone: 'green' },
